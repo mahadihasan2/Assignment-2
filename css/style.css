@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lora&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,400&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  /* transition: all 0.2s ease-out; */
+}
+/*====== Root-Class========  */
+
+:root {
+  --green: #16a085;
+  --black: #444;
+  --light-color: #3a3a3a;
+  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --border: 2rem solid var(--green);
+}
+/*============ Root class End ========== */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+.header {
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-decoration: none;
+}
+.header .navbar a {
+  color: var(--light-color);
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+.header .navbar a:hover {
+  color: var(--green);
+  border-bottom: 2px solid gray;
+}
+#menu-btn {
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  color: var(--green);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Main Section Start */
+
+section {
+  padding: 2rem 9%;
+}
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 20rem;
+}
+.home .image {
+  flex: 1 1 45rem;
+}
+.home .image img {
+  max-width: 80%;
+  margin-left: 100px;
+  animation-name: animation-img;
+  animation-duration: 2s;
+}
+.image img:hover {
+  animation-name: image-color;
+  animation-duration: 5s;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+/* @keyframes animation-img {
+  from {
+    max-width: 50%;
+  }
+  to {
+    max-width: 60%;
+  }
+} */
+@keyframes image-color {
+  0% {
+    border-color: orange;
+  }
+  25% {
+    border-color: orangered;
+  }
+  50% {
+    border-color: orchid;
+  }
+  100% {
+    border-color: white;
+  }
+}
+.home .content {
+  flex: 1 1 45rem;
+}
+.home .content h1 {
+  font-size: 3.5rem;
+  color: var(--black);
+  line-height: 1.8;
+  text-shadow: var(--text-shadow);
+}
+.home .content p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.2;
+  padding: 1rem 0;
+}
+/* .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  border: var(--border);
+  border-radius: 2.7rem;
+  box-shadow: var(--box-shadow);
+  color: var(--green);
+  cursor: pointer;
+  font-size: 2.7rem;
+} */
+
+/* .btn span {
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--green);
+  margin-left: 0.5rem;
+} */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 5px 35px;
+  border-radius: 50px;
+  background-color: #e02c6d;
+  color: #eee;
+}
+.fa-arrow-right {
+  margin-left: 10px;
+}
+
+/* Main Section End */
+
+.copany-logo {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 90%;
+  margin-top: 40px;
+  /* border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888; */
+}
+
+/* ==========Media Quaries  start =========*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: initial;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+    border: var(--border);
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top right;
+    transition: none;
+  }
+  .header .navbar a {
+    font-size: 2rem;
+    display: block;
+    margin: 2.5rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ==========Media Quaries  End =========*/
