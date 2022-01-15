@@ -93,6 +93,8 @@ html {
     animation: 2s ease-in-out 0s infinite alternate none running image-animation;
 }
 
+
+
 @keyframes image-animation {
     0% {
         transform: translateY(0px);
@@ -245,7 +247,7 @@ html {
     text-align: center;
     font-size: 15px;
     line-height: 25px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     width: 100%;
     background-color: rgb(10, 8, 38);
     color: rgb(255, 255, 255);
@@ -283,6 +285,65 @@ html {
     text-decoration: none;
     margin: 15px 5px;
 }
+
+/**** showcase *****/
+
+.showcase {
+    height: 400px;
+    background-color: white;
+    color: black;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.showcase .grid {
+
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-form {
+    height: 100%;
+    width: 100%;
+
+}
+
+.form-control {
+    font-size: 25px;
+}
+
+.cardse {
+    background-color: #ffff;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+
+
+
 
 @media (max-width: 575.98px) {
     html {
@@ -324,9 +385,17 @@ html {
         margin: 2.5rem;
     }
 
+
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .grid {
+
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
     .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
